@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de inventario: administra las categorías de productos.">
+    <title>Categorías | Sistema de Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>Sistema de Inventario</h1>
+
+        <nav aria-label="Menú principal">
+            <ul class="menu">
+                <li><a href="categorias.html" class="activo" aria-current="page">Categorías</a></li>
+                <li><a href="index.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido" id="contenido">
+        <section class="panel" aria-labelledby="tituloFormulario">
+            <h2 id="tituloFormulario">Registrar categoría</h2>
+
+            <form id="formCategoria">
+                <input type="hidden" id="categoriaId">
+
+                <div class="campo">
+                    <label for="nombreCategoria">
+                        Nombre de la categoría
+                    </label>
+                    <input
+                        type="text"
+                        id="nombreCategoria"
+                        maxlength="100"
+                        required
+                        placeholder="Ej. Electrónica">
+                </div>
+
+                <div class="campo">
+                    <label for="descripcionCategoria">
+                        Descripción
+                    </label>
+                    <textarea
+                        id="descripcionCategoria"
+                        rows="3"
+                        maxlength="500"
+                        placeholder="Descripción de la categoría"></textarea>
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" class="boton">
+                        Guardar categoría
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelarCategoria"
+                        class="boton boton-secundario">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel" aria-labelledby="tituloTabla">
+            <h2 id="tituloTabla">Categorías registradas</h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <caption class="solo-lector">
+                        Lista de categorías registradas
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaCategorias">
+                        <tr>
+                            <td colspan="4" class="sin-datos">
+                                Cargando categorías...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>Sistema de Inventario | Proyecto CRUD con Supabase</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/categorias.js"></script>
+</body>
+</html>
