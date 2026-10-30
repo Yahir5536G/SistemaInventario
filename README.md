@@ -125,4 +125,27 @@ create policy "escribir categorias" on categorias for all to anon using (true) w
 create policy "escribir productos"  on productos  for all to anon using (true) with check (true);
 ```
 
+## Guion para el video
+Lamentablemente no me fue posible grabar el audio, sin embargo, este es el guion correspondiente
+
+Hola, este es mi Sistema de Inventario, una aplicación web para llevar productos organizados por categoría. Está publicada en esta dirección, y voy a mostrar cómo se crean, consultan, actualizan y eliminan categorías y productos.
+
+Empiezo por Categorías. Si intento guardar una categoría sin nombre, el navegador directamente me lo impide.
+Ahora creo una categoría correcta con ambos datos, al guardar la categoría, muestra un mensaje de éxito en dónde se guardó la categoría, la cuál también se puede ver desde la tabla de categorías
+Al usar el botón de editar, el formulario se llena con los datos de la categoría que se está modificado para hacer los cambios necesarios, por ejemplo aquí le modifico la descripción 
+Al guardarla, de nuevo muestra un mensaje de exito, está vez de que se ha actualizado
+Podemos ver en la tabla qué la descripción efectivamente ha cambiado
+Se puede eliminar categorías usa di el botón de eliminar y confirmando la accion
+
+Ahora productos
+Primero intento guardar un producto con un precio negativo, que es rechazado por el navegador y nisiquiera se alcanza a enviar 
+Ahora cambiando el precio a uno aceptable, podemos ver qué se guarda correctamente
+Para editar funciona de la misma manera que categorías, al presionar el botón, el formulario se rellena con los datos del producto que se está editando para modificarlos y guardar los cambios, por ejemplo aquí cambio la cantidad de uno a diez 
+Muestra el mensaje de exito y se puede ver actualizado en la tabla 
+Eliminar también funciona de la misma manera, usando el botón y confirmando la eliminación
+La siguiente prueba es intentar eliminar una categoría que tenga productos asignados
+Al intentarlo, muestra un mensaje de error, ya que cada producto guarda el id de su categoria, esta relación está protegida por la llave foránea, por eso no permite eliminarla
+La página también se adapta a pantallas pequeñas, en la vista de celular, el formulario ocupa todo el ancho y la tabla cambia su estilo para requerir menos espacio horizontal y los botones están a la vista
+Es posible usarse de la misma manera desde el celular, aquí hago pruebas simples agregando y eliminando categorías y productos
+Finalmente, está es la estructura del proyecto y todos los archivos relacionados, los cuales también estarán en el repositorio
 
