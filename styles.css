@@ -284,7 +284,7 @@ tbody tr:hover {
 
     table {
         min-width: 0;egistrar producto
-        color: #ffffff;
+  
     }
 
     thead {
@@ -321,13 +321,14 @@ tbody tr:hover {
         border-bottom: none;
         text-align: right;
         overflow-wrap: anywhere;
+        color: #ffffff;
     }
 
     td::before {
         content: attr(data-label);
         flex: 0 0 38%;
         font-weight: bold;
-        color: #243449;
+        color: #ffffff;
         text-align: left;
     }
 
