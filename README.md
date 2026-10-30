@@ -7,7 +7,6 @@ usando Supabase como base de datos.
 
 **Enlaces**
 URL publica: https://sistemainventario-two.vercel.app/index.html 
-Video de funcionamiento:
 Repositorio: https://github.com/Yahir5536G/SistemaInventario
 
 
