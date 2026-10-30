@@ -25,12 +25,14 @@ Hogar no tiene productos, y se usa para mostrar un borrado permitido.
 
 **validaciones**
 
-Campo                  | Entrada invalida              | Resultado esperado
----------------------------------------------------------------------------------------------------
-Nombre de categoria    | Vacio                         | Mensaje de error: el nombre es obligatorio
-Nombre de categoria    | Repetido                      | Mensaje de error: ya existe
-Precio                 | Negativo o mas de 2 decimales | Mensaje de error
-Categoria del producto | Sin elegir                    | No se envia el formulario
+
+| Campo | Entrada inválida | Resultado esperado |
+| --- | --- | --- |
+| Nombre de categoria | Vacío | Mensaje de error: el nombre es obligatorio |
+| Nombre de categoria | Repetido | Mensaje de error: ya existe |
+| Precio | Negativo, o con más de 2 decimales | Mensaje de error |
+| Cantidad | Negativa o con decimales | Mensaje de error |
+| Categoría del producto | Sin elegir | No se envía el formulario |
 
 ## Estructura
 
